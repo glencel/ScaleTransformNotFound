@@ -31,11 +31,13 @@ namespace WpfApp1
 
             // My workarounds:
             // 1: Delay focus
-            // await Task.Delay(111); works for me but not reliable especially on slower machines.
+            // await Task.Delay(111);
             // 2: Try until successful
+            // while(true)
             // try
             // {
             //     TextBox.Focus();
+            //     return;
             // }
             // catch (Exception){}
 
