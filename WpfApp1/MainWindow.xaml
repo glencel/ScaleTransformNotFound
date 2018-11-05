@@ -6,12 +6,19 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:me="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBox VerticalAlignment="Center" Margin="20"
+      <md:PopupBox StaysOpen="True">
+        <Grid FocusManager.FocusedElement="{Binding ElementName=MyTextBox}" Width="100">
+          <TextBox Name="MyTextBox"/>
+        </Grid>    
+      </md:PopupBox>
+      <TextBox VerticalAlignment="Center" Margin="20"
                  x:Name="TextBox"
                  Visibility="Collapsed"/>
         <Button Content="CLICK ME" Click="ButtonBase_OnClick"
                 Margin="20"/>
+      <me:OversizedNumberSpinner/>
     </StackPanel>
 </Window>
