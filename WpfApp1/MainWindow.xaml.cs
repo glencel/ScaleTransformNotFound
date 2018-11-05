@@ -28,19 +28,6 @@ namespace WpfApp1
         private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             TextBox.Visibility = Visibility.Visible;
-
-            // My workarounds:
-            // 1: Delay focus
-            // await Task.Delay(111);
-            // 2: Try until successful
-            // while(true)
-            // try
-            // {
-            //     TextBox.Focus();
-            //     return;
-            // }
-            // catch (Exception){}
-
             TextBox.Focus();
         }
     }
